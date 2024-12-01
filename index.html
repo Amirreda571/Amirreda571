@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمير رضا - مبرمج مواقع</title>
+
+    <!-- إضافة مكتبة AOS (تأثيرات التمرير) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+
+    <!-- إضافة مكتبة Typed.js (تأثير النصوص الديناميكية) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <style>
+        /* إعدادات أساسية */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('amir.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: backgroundMove 20s infinite linear;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 50% 50%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        /* تنسيق الهيدر */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin: 10px 0 0;
+            color: #eee;
+        }
+
+        /* تأثيرات النصوص الديناميكية */
+        #typed-text {
+            font-size: 2rem;
+            color: #FFD700;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        /* قسم المحتوى */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #FFD700;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        .section p, .section ul {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .section ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            font-size: 1.5rem;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .contact a:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaa;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* تأثيرات الأزرار */
+        .button {
+            padding: 15px 30px;
+            background-color: #ffbf00;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f39c12;
+            transform: scale(1.1);
+        }
+
+        /* الخلفية التفاعلية */
+        .effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            transition: background 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>أمير رضا</h1>
+        <p>مبرمج مواقع محترف - تحويل أفكارك إلى واقع رقمي</p>
+        <div id="typed-text"></div>
+    </header>
+
+    <!-- خلفية تفاعلية -->
+    <div class="effect" id="effect"></div>
+
+    <div class="content">
+        <div class="section" data-aos="fade-up">
+            <h2>عن أمير رضا</h2>
+            <p>
+                أهلاً بكم في صفحتي الشخصية. أنا أمير رضا، مبرمج مواقع متخصص في تصميم وتطوير حلول تقنية مبتكرة. أعمل بشغف على تقديم مواقع عصرية واحترافية تناسب احتياجات العملاء في مختلف المجالات.  
+                أهدف دائمًا إلى الجمع بين التقنية والإبداع لتقديم تجربة رقمية مميزة.
+            </p>
+        </div>
+
+        <div class="section" data-aos="fade-right">
+            <h2>خدماتي</h2>
+            <ul>
+                <li>تصميم مواقع عصرية ومتوافقة مع الأجهزة المختلفة.</li>
+                <li>تطوير تطبيقات ويب ديناميكية باستخدام PHP و MySQL.</li>
+                <li>تحسين أداء وسرعة المواقع الإلكترونية.</li>
+                <li>إنشاء واجهات مستخدم جذابة وسهلة الاستخدام.</li>
+                <li>دعم فني وصيانة للمواقع القائمة.</li>
+            </ul>
+        </div>
+
+        <div class="section" data-aos="fade-left">
+            <h2>لماذا تختارني؟</h2>
+            <p>
+                أعمل بجد لضمان رضا العملاء من خلال تقديم خدمات بجودة عالية وأسعار تنافسية. لدي خبرة في التعامل مع مختلف التقنيات والأدوات لتلبية جميع احتياجاتك في تطوير المواقع.  
+                تواصل معي لتحويل فكرتك إلى موقع إلكتروني يبرز في سوق اليوم.
+            </p>
+        </div>
+
+        <div class="contact" data-aos="zoom-in">
+            <h2>تواصل معي</h2>
+            <a href="contact.html" class="button">اتصل بي الآن</a>
+            <div class="contact-info">
+                <p>رقم الهاتف: 01553612120</p>
+                <p>البريد الإلكتروني: amirreda@example.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 جميع الحقوق محفوظة - تصميم وبرمجة: <a href="#">أمير رضا</a></p>
+    </footer>
+
+    <!-- إضافة سكربت AOS لتأثيرات التمرير -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- سكربت الحركة التفاعلية للخلفية -->
+    <script>
+        let effect = document.getElementById('effect');
+        document.body.addEventListener('mousemove', function(e) {
+            let x = e.clientX / window.innerWidth * 100;
+            let y = e.clientY / window.innerHeight * 100;
+            effect.style.background = `rgba(${x}, ${y}, 100, 0.5)`;
+        });
+
+        // إضافة النصوص الديناميكية
+        var options = {
+            strings: ["مرحبًا! أنا أمير رضا", "مبرمج مواقع محترف", "أساعدك في بناء موقعك"],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 1000,
+            startDelay: 500,
+            loop: true
+        };
+        var typed = new Typed("#typed-text", options);
+    </script>
+</body>
+</html>
